@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        android:background="@null"
+        android:layout_marginRight="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="44dp"
+        android:id="@+id/saveButton"
+        android:onClick="onSaveButtonClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:hint="Name"
+        android:textColorHint="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTextView"
+        android:layout_alignTop="@+id/contactButton"
+        android:layout_alignLeft="@+id/clockButton"
+        android:layout_alignStart="@+id/clockButton"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp" />
+
+
+    <TextView
+        android:hint="Phone Number"
+        android:textColorHint="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contactButton"
+        android:layout_alignLeft="@+id/nameTextView"
+        android:layout_alignStart="@+id/nameTextView"
+        android:id="@+id/phoneNumberTextView"/>
+
+    <TextView
+        android:text="Name"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayTextView"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_alignBaseline="@+id/displayEditText"
+        android:layout_alignBottom="@+id/displayEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:tint="@color/colorAccent"
+        app:srcCompat="@drawable/my_alarm_icon"
+        android:id="@+id/clockButton"
+        android:onClick="onTimeButtonClick"
+        android:layout_alignBottom="@+id/calenderButton"
+        android:layout_toRightOf="@+id/calenderButton"
+        android:layout_toEndOf="@+id/calenderButton"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <EditText
+        android:text=""
+        android:hint="Enter the message"
+        android:textColorHint="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/messageEditText"
+        android:layout_below="@+id/phoneNumberTextView"
+        android:layout_alignLeft="@+id/contactButton"
+        android:layout_alignStart="@+id/contactButton"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:text="Message"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/messageTextView"
+        android:layout_alignBaseline="@+id/messageEditText"
+        android:layout_alignBottom="@+id/messageEditText"
+        android:layout_alignLeft="@+id/contactTextView"
+        android:layout_alignStart="@+id/contactTextView" />
+
+    <CheckBox
+        android:text="Send SMS"
+        android:checked="true"
+        android:onClick="onCheckboxClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendSMSCheckBox"
+        android:layout_below="@+id/messageEditText"
+        android:layout_alignLeft="@+id/messageTextView"
+        android:layout_alignStart="@+id/messageTextView"
+        android:layout_marginTop="25dp" />
+
+    <EditText
+        android:text=""
+        android:hint="Enter the display name"
+        android:textColorHint="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayEditText"
+        android:layout_marginTop="72dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/sendSMSCheckBox"
+        android:layout_toEndOf="@+id/sendSMSCheckBox" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/my_person_icon"
+        android:background="@null"
+        android:tint="@color/colorAccent"
+        android:id="@+id/contactButton"
+        android:onClick="onContactButtonClick"
+        android:layout_alignTop="@+id/contactTextView"
+        android:layout_alignLeft="@+id/calenderButton"
+        android:layout_alignStart="@+id/calenderButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/my_calender_icon"
+        android:tint="@color/colorAccent"
+        android:background="@null"
+        android:id="@+id/calenderButton"
+        android:onClick="onDateButtonClick"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/displayEditText"
+        android:layout_alignLeft="@+id/displayEditText"
+        android:layout_alignStart="@+id/displayEditText" />
+
+    <TextView
+        android:text="Date"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateTextView"
+        android:layout_above="@+id/contactTextView"
+        android:layout_alignLeft="@+id/displayTextView"
+        android:layout_alignStart="@+id/displayTextView"
+        android:layout_alignTop="@+id/calenderButton" />
+
+    <TextView
+        android:text="Contact"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:id="@+id/contactTextView"
+        android:layout_below="@+id/calenderButton"
+        android:layout_alignLeft="@+id/dateTextView"
+        android:layout_alignStart="@+id/dateTextView" />
+
+
+</RelativeLayout>
